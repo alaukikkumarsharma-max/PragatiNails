@@ -1,0 +1,22 @@
+@use '../../../../styles/_variables' as *;
+
+.floating-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: $whatsapp-green;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-cta;
+  z-index: 99;
+}
+
+.floating-wa img {
+  width: 28px;
+  height: 28px;
+}

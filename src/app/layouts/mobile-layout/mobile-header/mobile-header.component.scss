@@ -1,0 +1,29 @@
+@use '../../../../styles/_variables' as *;
+
+.mobile-header {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: white;
+  border-bottom: 1px solid $border-light;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.logo img {
+  height: 28px;
+}
+.menu-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.menu-btn,
+.wa-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+}

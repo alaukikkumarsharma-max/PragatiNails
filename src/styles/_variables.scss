@@ -1,0 +1,39 @@
+/* COLORS */
+$primary-pink: #f7c6d0;
+$light-pink: #fff6f8;
+$dark-text: #1f1f1f;
+$muted-text: #777;
+$border-light: #eee;
+
+/* WHATSAPP */
+$whatsapp-green: #25d366;
+
+/* FONT */
+$font-main: 'Poppins', 'Inter', system-ui, sans-serif;
+
+/* LAYOUT */
+$header-height: 56px;
+$footer-height: 64px;
+
+/* RADIUS */
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 20px;
+
+/* SHADOW */
+$shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+$shadow-cta: 0 6px 16px rgba(0, 0, 0, 0.25);
+
+body {
+  margin: 0;
+  font-family: $font-main;
+  color: $dark-text;
+
+  /* 🔥 THIS CREATES MOCKUP FEEL */
+  background: linear-gradient(
+    180deg,
+    #fff6f8 0%,
+    #fdecef 40%,
+    #ffffff 100%
+  );
+}

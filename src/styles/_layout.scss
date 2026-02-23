@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-main;
+  color: $dark-text;
+  background: white;
+}
+
+main {
+  padding-bottom: 90px; // space for floating WhatsApp
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: $radius-md;
+}

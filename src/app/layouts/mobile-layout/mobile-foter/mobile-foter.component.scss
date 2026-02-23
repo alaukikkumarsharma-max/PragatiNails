@@ -1,0 +1,14 @@
+@use '../../../../styles/_variables' as *;
+
+.mobile-footer {
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 13px;
+  color: $muted-text;
+  background: #fafafa;
+}
+
+.tagline {
+  margin-top: 4px;
+  font-size: 12px;
+}

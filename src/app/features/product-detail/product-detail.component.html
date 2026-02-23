@@ -1,0 +1,32 @@
+<section *ngIf="product$ | async as product" class="detail">
+
+  <img
+    [src]="'assets/' + product.images[0]"
+    [alt]="product.name"
+    class="image"
+  />
+
+  <h2>{{ product.name }}</h2>
+  <p class="price">₹{{ product.price }}</p>
+  <p class="desc">{{ product.description }}</p>
+
+  <div *ngIf="product.hasSize" class="sizes">
+    <button
+      *ngFor="let s of ['S','M','L']"
+      (click)="selectedSize = s"
+      [class.active]="selectedSize === s">
+      {{ s }}
+    </button>
+  </div>
+
+  <div class="qty">
+    <button (click)="quantity = quantity - 1" [disabled]="quantity === 1">−</button>
+    <span>{{ quantity }}</span>
+    <button (click)="quantity = quantity + 1">+</button>
+  </div>
+
+  <button class="order-btn" (click)="order(product)">
+    🟢 Order on WhatsApp
+  </button>
+
+</section>

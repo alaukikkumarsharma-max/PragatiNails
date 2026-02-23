@@ -1,0 +1,19 @@
+<header class="mobile-header">
+  <button class="menu-btn" (click)="toggleMenu()"> 
+    <img src="../../../../assets/images/icons/menu.svg" alt="☰" />
+  </button>
+
+  <a routerLink="/" class="logo">
+    <img src="../../../../assets/images/logo/Brandlogo.png" alt="PragatiNails" />
+  </a>
+
+  <button class="wa-btn" (click)="openWhatsApp()">
+    <img src="../../../../assets/images/icons/whatsapp.svg" alt="WhatsApp" />
+  </button>
+</header>
+
+<app-mobile-menu
+  *ngIf="isMenuOpen"
+  (close)="closeMenu()">
+</app-mobile-menu>
+

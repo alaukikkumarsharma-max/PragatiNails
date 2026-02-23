@@ -1,0 +1,10 @@
+<section class="page">
+  <h2>Nail Extensions</h2>
+
+  <div class="grid">
+    <app-product-card
+      *ngFor="let product of products$ | async"
+      [product]="product">
+    </app-product-card>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "pink-glossy",
+    "name": "Pink Glossy Nail Extensions",
+    "price": 499,
+    "category": "extensions",
+    "hasSize": true,
+    "images": ["images/products/Extensions/GlossyPink1.png", "images/products/Extensions/Floral.png"],
+    "description": "Reusable salon-finish press-on nails"
+  },
+  {
+    "id": "french-tip",
+    "name": "French Tip Nail Extensions",
+    "price": 599,
+    "category": "extensions",
+    "hasSize": true,
+    "images": ["products/french1.jpg"],
+    "description": "Classic French look with modern finish"
+  },
+  {
+    "id": "rose-gold-sticker",
+    "name": "Rose Gold Nail Stickers",
+    "price": 199,
+    "category": "stickers",
+    "hasSize": false,
+    "images": ["images/products/Strickers/FrenchTips.png"],
+    "description": "Trendy easy-to-apply nail stickers"
+  }
+]

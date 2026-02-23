@@ -1,0 +1,15 @@
+<div class="overlay" (click)="closeMenu()"></div>
+
+<aside class="drawer">
+  <button class="close-btn" (click)="closeMenu()">✕</button>
+
+  <nav>
+    <a routerLink="/" (click)="closeMenu()">Home</a>
+    <a routerLink="/extensions" (click)="closeMenu()">Nail Extensions</a>
+    <a routerLink="/stickers" (click)="closeMenu()">Nail Stickers</a>
+    <a routerLink="/contact" (click)="closeMenu()">Contact</a>
+  </nav>
+
+  <button class="wa-btn" (click)="openWhatsApp()"> <img src="../../../../assets/images/icons/whatsapp.svg" alt="WhatsApp" />
+  </button>
+</aside>
