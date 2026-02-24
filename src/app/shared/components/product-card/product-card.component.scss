@@ -1,36 +1,118 @@
+/* ===== MEDIA QUERY MIXINS ===== */
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
 .card {
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .placeholder {
   height: 140px;
   background: #f2f2f2;
+  flex-shrink: 0;
+
+  @include tablet {
+    height: 180px;
+  }
+
+  @include desktop {
+    height: 220px;
+  }
 }
 
 .info {
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @include tablet {
+    padding: 14px;
+  }
+
+  @include desktop {
+    padding: 16px;
+  }
 
   h3 {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 4px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include desktop {
+      font-size: 15px;
+    }
   }
 
   .price {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include desktop {
+      font-size: 15px;
+    }
   }
 }
 
 .order-btn {
   width: 100%;
-  padding: 10px;
+  padding: 8px 12px;
   background: #25d366;
   color: white;
   border: none;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  @include tablet {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  @include desktop {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  &:hover {
+    background-color: #1fa752;
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }

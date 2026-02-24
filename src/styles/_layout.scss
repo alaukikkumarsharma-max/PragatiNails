@@ -1,22 +1,51 @@
 @use 'variables' as *;
 
+/* ===== MEDIA QUERY MIXINS ===== */
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+/* ===== GLOBAL STYLES ===== */
 * {
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  width: 100%;
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
   font-family: $font-main;
   color: $dark-text;
   background: white;
 }
 
 main {
-  padding-bottom: 90px; // space for floating WhatsApp
+  padding-bottom: 90px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 h1, h2, h3 {
   margin: 0;
+  word-wrap: break-word;
 }
 
 section {
@@ -25,6 +54,16 @@ section {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
   border-radius: $radius-md;
+}
+
+p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
 }

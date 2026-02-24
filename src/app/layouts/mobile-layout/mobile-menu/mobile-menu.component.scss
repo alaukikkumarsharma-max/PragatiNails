@@ -1,5 +1,12 @@
 @use '../../../../styles/_variables' as *;
 
+/* ===== MEDIA QUERY MIXINS ===== */
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
 .overlay {
   position: fixed;
   inset: 0;
@@ -19,6 +26,11 @@
   box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  
+  @include tablet {
+    width: 60%;
+    padding: 24px 20px;
+  }
 }
 
 .close-btn {
@@ -26,6 +38,17 @@
   background: none;
   border: none;
   font-size: 22px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 nav {
@@ -33,19 +56,40 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
 
-nav a {
-  font-size: 16px;
-  text-decoration: none;
-  color: $dark-text;
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    color: $dark-text;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $primary-pink;
+    }
+  }
 }
 
 .wa-btn {
   margin-top: auto;
-  padding: 14px;
+  padding: 14px 16px;
   background: $whatsapp-green;
   color: white;
+  border: none;
+  margin-bottom: 29px;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  word-wrap: break-word;
+
+  &:hover {
+    background-color: #1fa752;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
